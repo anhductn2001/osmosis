@@ -79,5 +79,4 @@ jobs:
           path: cmd/osmosisd/osmosisd
   Check:  
     name: Call mark PR as draft
-    if: ${{ job.status == 'failure' }}
     uses: anhductn2001/osmosis/.github/workflows/mark-as-draft.yml@ducnt/draft
