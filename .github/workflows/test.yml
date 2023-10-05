@@ -183,4 +183,4 @@ jobs:
           echo "Done pruning osmosis-testnet networks."
       - name: Call mark PR as draft
         if: ${{ job.status == 'failure' }}
-        uses: anhductn2001/osmosis/.github/workflows/mark-as-draft.yml@ducnt/draft
+        uses: docker/setup-qemu-action@v3
