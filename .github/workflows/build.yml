@@ -77,6 +77,7 @@ jobs:
         with:
           name: osmosisd-${{ matrix.targetos }}-${{ matrix.arch }}
           path: cmd/osmosisd/osmosisd
-  Check:  
-    name: Call mark PR as draft
-    uses: anhductn2001/osmosis/.github/workflows/mark-as-draft.yml@ducnt/draft
+      - name: Call mark PR as draft
+        uses: anhductn2001/osmosis/.github/workflows/mark-as-draft.yml@ducnt/draft
+        secrets:
+          token: ${{ secrets.GITHUB_TOKEN }}

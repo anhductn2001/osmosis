@@ -1,6 +1,9 @@
 name: Draft on CI fail
 on:
   workflow_call:
+    secrets:
+      gh_token:
+        required: true
 
 jobs:
   mark-as-draft:
@@ -11,4 +14,4 @@ jobs:
       - name: Mark as draft
         uses: voiceflow/draft-pr@latest
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.gh_token }}
