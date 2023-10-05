@@ -77,7 +77,7 @@ jobs:
         with:
           name: osmosisd-${{ matrix.targetos }}-${{ matrix.arch }}
           path: cmd/osmosisd/osmosisd
-  Mark-as-draft: 
+  mark-as-draft: 
     name: Mark PR as draft
     needs: build
     if: ${{failure()}}
